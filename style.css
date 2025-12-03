@@ -1,56 +1,115 @@
+/* Background */
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
-  background: #f4f4f4;
+  color: #fff;
 }
 
-.quiz-container {
-  max-width: 600px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.question {
-  font-size: 20px;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.options label {
-  display: block;
-  margin-bottom: 8px;
-  cursor: pointer;
-}
-
-input[type="text"] {
+/* Wrapper */
+.quiz-wrapper {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  max-width: 600px;
 }
 
-button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #2196f3;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
+/* Title */
+.quiz-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease-in-out;
 }
 
-button:hover {
-  background: #0b7dda;
+/* Glassmorphism Card */
+.quiz-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  animation: slideUp 0.8s ease-in-out;
 }
 
-.score {
+/* Question */
+.question {
   font-size: 22px;
   font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Options */
+.options label {
+  display: block;
+  margin: 12px 0;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.options label:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.02);
+}
+
+/* Input box */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+}
+
+/* Next Button */
+.next-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #ffffff;
+  color: #2575fc;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.next-btn:hover {
+  background: #e4e4e4;
+  transform: translateY(-3px);
+}
+
+/* Score */
+.score {
+  font-size: 26px;
   text-align: center;
   margin-top: 20px;
 }
+
+/* Progress Bar */
+.progress-bar {
+  background: rgba(255, 255, 255, 0.3);
+  height: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#progress {
+  width: 0%;
+  height: 100%;
+  background: #00ffcc;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Animati*
